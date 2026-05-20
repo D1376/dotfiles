@@ -1,7 +1,7 @@
 # Theme & Background
 theme = Catppuccin Mocha
-background-opacity = 0.60
-background-blur = 20
+background-opacity = 0.80
+background-blur = 30
 
 # Shader
 # custom-shader = ./shaders/cursor_warp.glsl
@@ -28,7 +28,7 @@ macos-option-as-alt = true
 # Shell Integration
 shell-integration-features = no-cursor
 
-# Cusor
+# Cursor
 cursor-style = block
 cursor-click-to-move = true
 cursor-style-blink = true

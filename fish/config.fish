@@ -31,6 +31,9 @@ set -gx FZF_DEFAULT_OPTS "--height=40% --layout=reverse --border --cycle --previ
 # Keep non-interactive shells lightweight.
 status is-interactive; or return
 
+# Theme.
+fish_config theme choose fippuccin
+
 # Directory listing aliases.
 if command -q eza
     alias l.="eza -a"

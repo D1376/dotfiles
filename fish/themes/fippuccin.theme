@@ -1,0 +1,31 @@
+# name: Fippuccin
+# based on: fish default + Catppuccin Mocha
+
+fish_color_normal cdd6f4
+fish_color_autosuggestion 6c7086
+fish_color_cancel f38ba8
+fish_color_command a6e3a1
+fish_color_comment 6c7086
+fish_color_cwd f9e2af
+fish_color_cwd_root f38ba8
+fish_color_end fab387
+fish_color_error f38ba8
+fish_color_escape 94e2d5
+fish_color_history_current cdd6f4 --bold
+fish_color_host 89b4fa
+fish_color_host_remote 94e2d5
+fish_color_keyword cba6f7
+fish_color_operator f5c2e7
+fish_color_option fab387
+fish_color_param f2cdcd
+fish_color_quote f9e2af
+fish_color_redirection f5c2e7 --bold
+fish_color_search_match cdd6f4 --background=313244 --bold
+fish_color_selection cdd6f4 --background=313244 --bold
+fish_color_status f38ba8
+fish_color_user 94e2d5
+fish_color_valid_path --underline
+fish_pager_color_description yellow --italics
+fish_pager_color_prefix --bold --underline
+fish_pager_color_progress cdd6f4 --background=313244 --bold
+fish_pager_color_selected_background -r
