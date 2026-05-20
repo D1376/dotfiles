@@ -1,6 +1,6 @@
 return {
   'stevearc/oil.nvim',
-  lazy = false,
+  cmd = 'Oil',
   dependencies = { { 'echasnovski/mini.icons', opts = {} } },
   opts = {
     keymaps = {
@@ -22,7 +22,6 @@ return {
   },
   keys = {
     { '-', '<cmd>Oil<cr>', desc = 'Open parent directory' },
-    -- { '<leader>-', '<cmd>Oil --float<cr>', desc = 'Open parent float' },
-    -- { '<leader>e', '<cmd>Oil --float<cr>', desc = 'Open parent float' },
+    { '<leader>e', '<cmd>Oil --float<cr>', desc = 'File Explorer' },
   },
 }

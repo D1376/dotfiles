@@ -21,14 +21,11 @@ return {
       -- no_italic = true, -- Force no italic
       auto_integrations = true,
       integrations = {
-        cmp = true,
-        nvimtree = true,
         treesitter = true,
         notify = true,
         noice = true,
         dashboard = true,
         flash = true,
-        fzf = true,
         lsp_saga = true,
         mason = true,
         notifier = true,

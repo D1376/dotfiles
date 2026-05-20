@@ -17,7 +17,6 @@ return {
       },
       -- opts = {},
     },
-    'folke/lazydev.nvim',
   }, --- @module 'blink.cmp'
   --- @type blink.cmp.Config
   opts = {
@@ -38,7 +37,13 @@ return {
     sources = {
       default = { 'lsp', 'path', 'snippets', 'lazydev', 'buffer' },
       providers = {
-        lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
+        lazydev = {
+          module = 'lazydev.integrations.blink',
+          score_offset = 100,
+          enabled = function()
+            return vim.bo.filetype == 'lua'
+          end,
+        },
       },
     },
     snippets = { preset = 'luasnip' },
@@ -54,4 +59,5 @@ return {
       -- window = { border = 'rounded' },
     },
   },
+  opts_extend = { 'sources.default' },
 }

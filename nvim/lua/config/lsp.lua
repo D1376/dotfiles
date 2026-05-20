@@ -1,4 +1,22 @@
--- Mason PATH is handled by core.mason-path
+local severity = vim.diagnostic.severity
+
+local capabilities = {
+  textDocument = {
+    semanticTokens = {
+      multilineTokenSupport = true,
+    },
+  },
+}
+
+local ok, blink = pcall(require, 'blink.cmp')
+if ok then
+  capabilities = blink.get_lsp_capabilities(capabilities)
+end
+
+vim.lsp.config('*', {
+  capabilities = capabilities,
+})
+
 vim.lsp.enable {
   'lua_ls',
   'clangd',
@@ -6,11 +24,9 @@ vim.lsp.enable {
   'jdtls',
   'marksman',
   'ruff',
-  'cmake-language-server',
+  'cmake',
 }
 
--- LSP servers are automatically managed by Mason
--- Use :MasonVerify to check which tools are Mason-managed
 vim.diagnostic.config {
   virtual_text = true,
   underline = true,
@@ -22,14 +38,14 @@ vim.diagnostic.config {
   },
   signs = {
     text = {
-      [vim.diagnostic.severity.ERROR] = '󰅚 ',
-      [vim.diagnostic.severity.WARN] = '󰀪 ',
-      [vim.diagnostic.severity.INFO] = '󰋽 ',
-      [vim.diagnostic.severity.HINT] = '󰌶 ',
+      [severity.ERROR] = '󰅚 ',
+      [severity.WARN] = '󰀪 ',
+      [severity.INFO] = '󰋽 ',
+      [severity.HINT] = '󰌶 ',
     },
     numhl = {
-      [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
-      [vim.diagnostic.severity.WARN] = 'WarningMsg',
+      [severity.ERROR] = 'ErrorMsg',
+      [severity.WARN] = 'WarningMsg',
     },
   },
 }

@@ -1,9 +1,1 @@
-local M = {}
-M.diagnostics = {
-  Error = '󰅚',
-  Warn = '󰀪',
-  Info = '󰋽',
-  Hint = '󰌶',
-}
-
-return M
+return require 'config.icons'

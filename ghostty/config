@@ -1,10 +1,10 @@
 # Theme & Background
 theme = Catppuccin Mocha
-background-opacity = 0.95
-background-blur = 30
+background-opacity = 0.80
+background-blur = 10
 
 # Shader
-custom-shader = ./shaders/cursor_warp.glsl
+# custom-shader = ./shaders/cursor_warp.glsl
 
 # Fonts
 font-family = "JetBrains Mono"
@@ -15,12 +15,12 @@ adjust-cell-height = 5%
 adjust-cell-width = 5%
 
 # Windows
-# macos-titlebar-style = tabs
+macos-titlebar-style = tabs
 window-save-state = always
 window-colorspace = display-p3
 window-padding-balance = true
-# window-padding-x = 5
-window-padding-y = 5
+window-padding-x = 10
+# window-padding-y = 0
 
 # Mac Option Key
 macos-option-as-alt = true
