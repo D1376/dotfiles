@@ -74,7 +74,7 @@ conflicted = "[✖](red bold)"
 
 ahead      = "[↑${count}](teal)"
 behind     = "[↓${count}](peach)"
-diverged   = "[↕↑${ahead_count}↓${behind_count} ](mauve)"
+diverged   = "[↕↑${ahead_count}↓${behind_count}](mauve)"
 
 [package]
 format = '[$symbol$version]($style) '
@@ -259,6 +259,7 @@ format = '[$symbol($version )]($style)'
 success_symbol = '[➔](bold green)'
 error_symbol = '[✘](bold red)'
 vimcmd_symbol = '[V](bold green)'
+# success_symbol = "[](bold fg:green)"
 
 # OS ICON
 [os.symbols]

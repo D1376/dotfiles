@@ -16,3 +16,6 @@ yazi/flavors
 yazi/package.toml
 
 /raycast-x/extensions
+
+AGENTS.md
+CLAUDE.md
