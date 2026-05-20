@@ -1,8 +1,10 @@
 return {
   'stevearc/oil.nvim',
+  lazy = false,
   cmd = 'Oil',
   dependencies = { { 'echasnovski/mini.icons', opts = {} } },
   opts = {
+    default_file_explorer = true,
     keymaps = {
       ['<C-h>'] = false,
       ['<C-l>'] = false,

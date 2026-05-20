@@ -1,7 +1,7 @@
 # Theme & Background
 theme = Catppuccin Mocha
-background-opacity = 0.80
-background-blur = 10
+background-opacity = 0.60
+background-blur = 20
 
 # Shader
 # custom-shader = ./shaders/cursor_warp.glsl
