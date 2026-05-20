@@ -1,6 +1,6 @@
 return {
   'saghen/blink.cmp',
-  event = { 'BufReadPost', 'BufNewFile' },
+  lazy = false,
   version = '1.*',
   dependencies = {
     {

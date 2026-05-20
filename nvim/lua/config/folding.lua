@@ -49,7 +49,7 @@ local function fold_virt_text(result, start_text, lnum)
 end
 function _G.custom_foldtext()
   local start_text = vim.fn.getline(vim.v.foldstart):gsub('\t', string.rep(' ', vim.o.tabstop))
-  local nline = vim.v.foldend - vim.v.foldstart
+  local nline = vim.v.foldend - vim.v.foldstart + 1
   local result = {}
   fold_virt_text(result, start_text, vim.v.foldstart - 1)
   table.insert(result, { ' ', nil })

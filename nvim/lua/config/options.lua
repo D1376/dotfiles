@@ -40,9 +40,9 @@ vim.o.confirm = true
 
 vim.o.autoindent = true
 vim.o.expandtab = true
-vim.o.tabstop = 3
-vim.o.softtabstop = 3
-vim.o.shiftwidth = 3
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
 vim.o.smartindent = true
 
 vim.opt.jumpoptions = { 'clean', 'view' }
