@@ -1,3 +1,7 @@
+# ghostty/config
+# @author deng
+# since 2024 2025 2026
+
 # Theme & Background
 theme = Catppuccin Mocha
 background-opacity = 0.80

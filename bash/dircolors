@@ -1,3 +1,7 @@
+# bash/dircolors
+# @author deng
+# since 2024 2025 2026
+
 COLORTERM ?*
 TERM Eterm
 TERM ansi

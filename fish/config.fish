@@ -1,4 +1,4 @@
-# config.fish
+# fish/config.fish
 # @author deng
 # since 2024 2025 2026
 

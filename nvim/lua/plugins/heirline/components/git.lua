@@ -13,7 +13,7 @@ M.Git = {
     self.status_dict = vim.b.gitsigns_status_dict or {}
     self.has_changes = (self.status_dict.added or 0) ~= 0 or (self.status_dict.removed or 0) ~= 0 or (self.status_dict.changed or 0) ~= 0
   end,
-  hl = { fg = 'magenta' },
+  hl = { fg = 'git_branch' },
   {
     provider = function(self)
       return icons.git.Branch .. ' ' .. self.status_dict.head .. (self.has_changes and icons.git.Dirty or '')

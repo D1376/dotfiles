@@ -8,7 +8,7 @@ M.diagnostics = {
 }
 
 M.git = {
-  Branch = '',
+  Branch = '',
   Dirty = '*',
   Added = '',
   Removed = '',

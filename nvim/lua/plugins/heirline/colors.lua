@@ -40,6 +40,7 @@ function M.setup()
     diag_info = pick({ 'DiagnosticInfo' }, 'fg', status_fg),
     diag_hint = pick({ 'DiagnosticHint' }, 'fg', status_fg),
     git_add = pick({ 'GitSignsAdd', 'diffAdded' }, 'fg', status_fg),
+    git_branch = pick({ 'PreProc', 'Special' }, 'fg', '#f5c2e7'),
     git_change = pick({ 'GitSignsChange', 'diffChanged' }, 'fg', status_fg),
     git_delete = pick({ 'GitSignsDelete', 'diffDeleted' }, 'fg', status_fg),
     file = pick({ 'Identifier', 'Normal' }, 'fg', status_fg),
