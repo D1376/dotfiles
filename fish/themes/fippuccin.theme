@@ -17,14 +17,14 @@ fish_color_host_remote 94e2d5
 fish_color_keyword cba6f7
 fish_color_operator f5c2e7
 fish_color_option fab387
-fish_color_param f2cdcd
+fish_color_param cdd6f4
 fish_color_quote f9e2af
 fish_color_redirection f5c2e7 --bold
 fish_color_search_match cdd6f4 --background=313244 --bold
 fish_color_selection cdd6f4 --background=313244 --bold
 fish_color_status f38ba8
 fish_color_user 94e2d5
-fish_color_valid_path --underline
+fish_color_valid_path cyan --underline
 fish_pager_color_description yellow --italics
 fish_pager_color_prefix --bold --underline
 fish_pager_color_progress cdd6f4 --background=313244 --bold

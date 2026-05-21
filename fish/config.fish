@@ -3,7 +3,7 @@
 # since 2024 2025 2026
 
 # Cute startup greeting.
-set -g fish_greeting "Nyaa~ terminal ready! (='w'=)"
+set -g fish_greeting (printf "%sNyaa~ %sterminal ready! %s(=^w^=) <3%s" (set_color --bold magenta) (set_color 89B4FA) (set_color --bold magenta) (set_color normal))
 
 # Default editor.
 set -gx EDITOR nvim

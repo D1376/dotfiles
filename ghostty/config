@@ -1,10 +1,7 @@
 # Theme & Background
 theme = Catppuccin Mocha
 background-opacity = 0.80
-background-blur = 30
-
-# Shader
-# custom-shader = ./shaders/cursor_warp.glsl
+background-blur = 20
 
 # Fonts
 font-family = "JetBrains Mono"
