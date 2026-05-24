@@ -20,11 +20,12 @@ vim.lsp.config('*', {
 vim.lsp.enable {
   'lua_ls',
   'clangd',
-  'pyright',
+  'basedpyright',
   'jdtls',
   'marksman',
   'ruff',
   'cmake',
+  'vtsls',
 }
 
 vim.diagnostic.config {

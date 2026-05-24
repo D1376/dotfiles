@@ -7,3 +7,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+  group = group,
+  desc = 'Auto-create missing directories',
+  callback = function(event)
+    if event.match:match '^%w%w+://' then
+      return
+    end
+    local file = vim.uv.fs_realpath(event.match) or event.match
+    vim.fn.mkdir(vim.fn.fnamemodify(file, ':p:h'), 'p')
+  end,
+})

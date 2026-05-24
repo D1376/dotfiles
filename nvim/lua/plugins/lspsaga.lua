@@ -1,15 +1,21 @@
 return {
   'nvimdev/lspsaga.nvim',
   event = 'VeryLazy',
-  config = function()
-    require('lspsaga').setup {
-      ui = {
-        code_action = '',
-      },
-      lightbulb = {
-        enable = false,
-        virtual_text = false,
-      },
-    }
-  end,
+  opts = {
+    symbol_in_winbar = {
+      enable = true,
+      separator = ' › ',
+      hide_keyword = true,
+      folder_level = 1,
+    },
+    outline = {
+      enable = false,
+    },
+    lightbulb = {
+      enable = false,
+    },
+    code_action = {
+      enable = false,
+    },
+  },
 }

@@ -1,25 +1,21 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  event = { 'BufReadPost', 'BufNewFile' },
+  branch = 'main',
+  lazy = false,
   build = ':TSUpdate',
-  main = 'nvim-treesitter.configs',
-  init = function()
-    vim.treesitter.language.register('bash', { 'zsh', 'fish' })
-  end,
-  opts = {
-    ensure_installed = {
+  config = function()
+    require('nvim-treesitter').install {
       'bash',
       'c',
       'css',
       'diff',
       'html',
       'javascript',
-      'latex',
+      'typescript',
       'lua',
       'luadoc',
       'markdown',
       'markdown_inline',
-      'norg',
       'query',
       'regex',
       'scss',
@@ -29,12 +25,7 @@ return {
       'vim',
       'vimdoc',
       'vue',
-    },
-    auto_install = true,
-    highlight = {
-      enable = true,
-      additional_vim_regex_highlighting = { 'ruby' },
-    },
-    indent = { enable = true, disable = { 'ruby' } },
-  },
+    }
+    vim.treesitter.language.register('bash', { 'zsh', 'fish' })
+  end,
 }

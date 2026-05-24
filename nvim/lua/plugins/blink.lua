@@ -24,7 +24,7 @@ return {
       preset = 'enter',
       ['<C-y>'] = { 'select_and_accept' },
     },
-    cmdline = { completion = { menu = { auto_show = false } } },
+    cmdline = { completion = { menu = { auto_show = true } } },
     completion = {
       -- menu = { border = 'rounded' },
       documentation = {
@@ -32,6 +32,21 @@ return {
           -- border = 'rounded',
         },
         auto_show = true,
+      },
+      list = {
+        selection = {
+          preselect = true,
+          auto_insert = true,
+        },
+      },
+      menu = {
+        draw = {
+          columns = {
+            { 'kind_icon' },
+            { 'label', 'label_description', gap = 1 },
+            { 'source_name' },
+          },
+        },
       },
     },
     sources = {

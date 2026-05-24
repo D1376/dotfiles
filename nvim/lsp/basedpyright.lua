@@ -1,12 +1,12 @@
 ---@brief
---- https://github.com/microsoft/pyright
---- `pyright`, a static type checker and language server for python
+--- https://github.com/DetachHead/basedpyright
+--- `basedpyright`, a fork of pyright with Pylance features and stricter defaults
 
 local function set_python_path(command)
   local path = command.args
   local clients = vim.lsp.get_clients {
     bufnr = vim.api.nvim_get_current_buf(),
-    name = 'pyright',
+    name = 'basedpyright',
   }
 
   for _, client in ipairs(clients) do
@@ -21,7 +21,7 @@ end
 
 ---@type vim.lsp.Config
 return {
-  cmd = { 'pyright-langserver', '--stdio' },
+  cmd = { 'basedpyright-langserver', '--stdio' },
   filetypes = { 'python' },
   root_markers = {
     'pyrightconfig.json',
@@ -32,12 +32,10 @@ return {
     'Pipfile',
     '.git',
   },
-  ---@type lspconfig.settings.pyright
   settings = {
-    python = {
+    basedpyright = {
       analysis = {
         autoSearchPaths = true,
-        useLibraryCodeForTypes = true,
         diagnosticMode = 'openFilesOnly',
       },
     },
@@ -45,7 +43,7 @@ return {
   on_attach = function(client, bufnr)
     vim.api.nvim_buf_create_user_command(bufnr, 'LspPyrightOrganizeImports', function()
       local params = {
-        command = 'pyright.organizeimports',
+        command = 'basedpyright.organizeimports',
         arguments = { vim.uri_from_bufnr(bufnr) },
       }
 
@@ -54,7 +52,7 @@ return {
       desc = 'Organize Imports',
     })
     vim.api.nvim_buf_create_user_command(bufnr, 'LspPyrightSetPythonPath', set_python_path, {
-      desc = 'Reconfigure pyright with the provided python path',
+      desc = 'Reconfigure basedpyright with the provided python path',
       nargs = 1,
       complete = 'file',
     })

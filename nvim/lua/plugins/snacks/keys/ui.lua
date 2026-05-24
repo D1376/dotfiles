@@ -1,5 +1,12 @@
 return {
   {
+    '<leader>e',
+    function()
+      Snacks.explorer()
+    end,
+    desc = 'File Explorer',
+  },
+  {
     '<leader>uC',
     function()
       Snacks.picker.colorschemes()

@@ -1,7 +1,7 @@
 return {
   'MeanderingProgrammer/render-markdown.nvim',
   ft = { 'markdown', 'markdown.mdx', 'Avante' },
-  dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' },
+  dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.icons' },
   opts = {
     sign = { enabled = false },
     code = {

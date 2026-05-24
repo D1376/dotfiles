@@ -1,6 +1,6 @@
 -- Folding
-vim.o.foldcolumn = '0' -- '0' is not bad
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldcolumn = '0'
+vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.o.foldmethod = 'expr'
@@ -13,6 +13,17 @@ vim.opt.fillchars = {
   eob = ' ',
 }
 vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+
+-- Upgrade to LSP folding when server supports it
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(ev)
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    if client and client:supports_method 'textDocument/foldingRange' then
+      local win = vim.api.nvim_get_current_win()
+      vim.wo[win].foldexpr = 'v:lua.vim.lsp.foldexpr()'
+    end
+  end,
+})
 
 local function fold_virt_text(result, start_text, lnum)
   local text = ''

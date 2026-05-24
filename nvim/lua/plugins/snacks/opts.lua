@@ -1,7 +1,7 @@
 return {
   bigfile = { enabled = true },
   dashboard = require 'plugins.snacks.dashboard',
-  explorer = { enabled = false },
+  explorer = { enabled = true },
   indent = { enabled = true },
   input = { enabled = true },
   notifier = {

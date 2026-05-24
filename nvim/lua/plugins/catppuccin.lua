@@ -21,30 +21,34 @@ return {
       -- no_italic = true, -- Force no italic
       auto_integrations = true,
       integrations = {
-        treesitter = true,
-        notify = true,
-        noice = true,
-        dashboard = true,
-        flash = true,
-        lsp_saga = true,
-        mason = true,
-        notifier = true,
-        which_key = true,
-        snacks = {
-          enabled = true,
-          indent_scope_color = '', -- catppuccin color (eg. `lavender`) Default: text
+        aerial = true,
+        blink_cmp = {
+          style = 'bordered',
         },
+        dashboard = true,
+        dap = true,
+        dap_ui = true,
+        flash = true,
         gitsigns = {
           enabled = true,
           transparent = true,
         },
+        lsp_saga = true,
+        mason = true,
         mini = {
           enabled = true,
           indentscope_color = '',
         },
-        blink_cmp = {
-          style = 'bordered',
+        noice = true,
+        notifier = true,
+        notify = true,
+        render_markdown = true,
+        snacks = {
+          enabled = true,
+          indent_scope_color = '', -- catppuccin color (eg. `lavender`) Default: text
         },
+        treesitter = true,
+        which_key = true,
       },
     }
     vim.cmd.colorscheme 'catppuccin'

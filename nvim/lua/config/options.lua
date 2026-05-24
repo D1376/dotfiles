@@ -3,6 +3,7 @@ vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
 vim.g.markdown_folding = 1
 vim.g.simple_indicator_on = false
+vim.g.snacks_animate = true
 
 vim.filetype.add {
   extension = {

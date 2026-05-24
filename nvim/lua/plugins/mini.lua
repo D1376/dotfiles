@@ -1,6 +1,6 @@
 -- Collection of various small independent plugins/modules
 return {
-  'echasnovski/mini.nvim',
+  'nvim-mini/mini.nvim',
   event = 'VeryLazy',
   config = function()
     -- mini.surround
