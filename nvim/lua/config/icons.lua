@@ -65,7 +65,7 @@ M.which_key_items = {
   breakpoint = { icon = ' ', color = 'red' },
   diagnostics = { icon = ' ', color = 'yellow' },
   explorer = { icon = ' ', color = 'blue' },
-  outline = { icon = '󰙅 ' , color = 'green' },
+  outline = { icon = '󰙅 ', color = 'green' },
   notifications = { icon = ' ', color = 'purple' },
   news = { icon = ' ', color = 'cyan' },
   scratch = { icon = ' ', color = 'green' },

@@ -4,7 +4,7 @@
 
 # Theme & Background
 theme = Catppuccin Mocha
-background-opacity = 0.90
+background-opacity = 0.95
 background-blur = 20
 
 # Fonts
@@ -16,12 +16,12 @@ adjust-cell-height = 5%
 adjust-cell-width = 5%
 
 # Windows
-macos-titlebar-style = tabs
+macos-titlebar-style = hidden
 window-save-state = always
 window-colorspace = display-p3
 window-padding-balance = true
 window-padding-x = 5
-# window-padding-y = 5
+window-padding-y = 5
 
 # Mac Option Key
 macos-option-as-alt = true
@@ -34,19 +34,19 @@ cursor-style = block
 cursor-click-to-move = true
 cursor-style-blink = true
 
-# Tmux Keybind
-keybind = ctrl+`=activate_key_table_once:tmux
-keybind = tmux/catch_all=ignore
-keybind = tmux/escape=deactivate_key_table
-
-keybind = tmux/c=new_tab
-keybind = tmux/n=next_tab
-keybind = tmux/p=previous_tab
-
-keybind = tmux/v=new_split:right
-keybind = tmux/s=new_split:down
-
-keybind = tmux/k=goto_split:up
-keybind = tmux/j=goto_split:down
-keybind = tmux/h=goto_split:left
-keybind = tmux/l=goto_split:right
+# # Tmux Keybind
+# keybind = ctrl+`=activate_key_table_once:tmux
+# keybind = tmux/catch_all=ignore
+# keybind = tmux/escape=deactivate_key_table
+#
+# keybind = tmux/c=new_tab
+# keybind = tmux/n=next_tab
+# keybind = tmux/p=previous_tab
+#
+# keybind = tmux/v=new_split:right
+# keybind = tmux/s=new_split:down
+#
+# keybind = tmux/k=goto_split:up
+# keybind = tmux/j=goto_split:down
+# keybind = tmux/h=goto_split:left
+# keybind = tmux/l=goto_split:right
