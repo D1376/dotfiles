@@ -26,10 +26,11 @@ vim.lsp.enable {
   'ruff',
   'cmake',
   'vtsls',
+  'tinymist',
 }
 
 vim.diagnostic.config {
-  virtual_text = true,
+  virtual_text = false,
   underline = true,
   update_in_insert = false,
   severity_sort = true,
@@ -50,3 +51,5 @@ vim.diagnostic.config {
     },
   },
 }
+
+vim.diagnostic.enable(false)
