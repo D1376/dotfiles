@@ -4,13 +4,13 @@
 
 # Theme & Background
 theme = Catppuccin Mocha
-background-opacity = 0.90
+background-opacity = 0.85
 background-blur = 20
 
 # Fonts
 font-family = "JetBrains Mono"
 font-family = "Maple Mono NF CN"
-font-size = 14
+font-size = 15
 font-thicken = true
 adjust-cell-height = 10%
 adjust-cell-width = 5%
@@ -20,8 +20,8 @@ macos-titlebar-style = hidden
 window-save-state = always
 window-colorspace = display-p3
 window-padding-balance = true
-window-padding-x = 5
-window-padding-y = 5
+window-padding-x = 10
+# window-padding-y = 5
 
 # Mac Option Key
 macos-option-as-alt = true

@@ -1,5 +1,3 @@
-local icons = require 'config.icons'
-
 local M = {}
 
 M.Spacer = { provider = ' ' }
@@ -11,7 +9,7 @@ M.Ruler = {
     local total = math.max(vim.fn.line '$', 1)
     local percent = math.floor(((line - 1) / math.max(total - 1, 1)) * 100 + 0.5)
 
-    return (' %s %d %s %d %s %d%%'):format(icons.status.Line, line, icons.status.Column, column, icons.status.Position, percent)
+    return (' %d:%d %d%%'):format(line, column, percent)
   end,
   hl = { fg = 'dim' },
 }

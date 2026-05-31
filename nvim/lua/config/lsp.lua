@@ -10,7 +10,7 @@ local capabilities = {
 
 local ok, blink = pcall(require, 'blink.cmp')
 if ok then
-  capabilities = blink.get_lsp_capabilities(capabilities)
+  capabilities = blink.get_lsp_capabilities(capabilities, true)
 end
 
 vim.lsp.config('*', {
@@ -51,5 +51,3 @@ vim.diagnostic.config {
     },
   },
 }
-
-vim.diagnostic.enable(false)

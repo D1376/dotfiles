@@ -21,19 +21,25 @@ return {
   --- @type blink.cmp.Config
   opts = {
     keymap = {
-      preset = 'enter',
-      ['<C-y>'] = { 'select_and_accept' },
+      preset = 'super-tab',
+      ['<C-d>'] = { 'show_documentation', 'hide_documentation', 'fallback' },
+      ['<C-y>'] = { 'select_and_accept', 'fallback' },
     },
     cmdline = { completion = { menu = { auto_show = true } } },
     completion = {
+      trigger = {
+        show_in_snippet = false,
+      },
       -- menu = { border = 'rounded' },
       documentation = {
+        auto_show = false,
+        treesitter_highlighting = false,
         window = {
           -- border = 'rounded',
         },
-        auto_show = true,
       },
       list = {
+        max_items = 100,
         selection = {
           preselect = true,
           auto_insert = true,
@@ -50,8 +56,28 @@ return {
       },
     },
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'lazydev', 'buffer' },
+      default = { 'lsp', 'path', 'snippets', 'lazydev' },
       providers = {
+        lsp = {
+          async = true,
+          timeout_ms = 80,
+          fallbacks = {},
+        },
+        path = {
+          opts = {
+            get_cwd = function()
+              return vim.fn.getcwd()
+            end,
+          },
+        },
+        snippets = {
+          max_items = 20,
+          min_keyword_length = 2,
+        },
+        buffer = {
+          max_items = 30,
+          min_keyword_length = 3,
+        },
         lazydev = {
           module = 'lazydev.integrations.blink',
           score_offset = 100,
@@ -63,15 +89,13 @@ return {
     },
     snippets = { preset = 'luasnip' },
 
-    -- By default, we use the Lua implementation instead, but you may enable
-    -- the rust implementation via `'prefer_rust_with_warning'`
+    fuzzy = {
+      implementation = 'prefer_rust_with_warning',
+      sorts = { 'exact', 'score', 'sort_text' },
+    },
 
-    fuzzy = { implementation = 'lua' },
-
-    -- Shows a signature help window while you type arguments for a function
     signature = {
-      enabled = true,
-      -- window = { border = 'rounded' },
+      enabled = false,
     },
   },
   opts_extend = { 'sources.default' },

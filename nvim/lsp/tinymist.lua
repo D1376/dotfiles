@@ -2,7 +2,7 @@
 return {
   cmd = { 'tinymist' },
   filetypes = { 'typst' },
-  root_markers = { '.git', 'typst.toml' },
+  root_markers = { 'typst.toml', '.git' },
   settings = {
     exportPdf = 'onType',
     formatterMode = 'typstyle',
