@@ -5,6 +5,7 @@ fcitx5
 git
 configstore
 nvim/lazy-lock.json
+nvim/tmp
 gh
 raycast
 zed

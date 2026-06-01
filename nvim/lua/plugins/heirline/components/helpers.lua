@@ -1,6 +1,7 @@
 local icons = require 'config.icons'
 
 local M = {}
+local formatter_cache = {}
 
 function M.buf_option(bufnr, name)
   return vim.api.nvim_get_option_value(name, { buf = bufnr or 0 })
@@ -37,13 +38,34 @@ function M.snacks_call(callback)
   end
 end
 
-function M.formatter_labels()
+local function formatter_cache_key(bufnr)
+  local names = {}
+  for _, client in ipairs(vim.lsp.get_clients { bufnr = bufnr }) do
+    names[#names + 1] = client.name
+  end
+  table.sort(names)
+
+  return table.concat({
+    M.buf_option(bufnr, 'filetype'),
+    vim.fn.getcwd(),
+    table.concat(names, ','),
+  }, '\n')
+end
+
+function M.formatter_labels(bufnr)
+  bufnr = bufnr or vim.api.nvim_get_current_buf()
+  local key = formatter_cache_key(bufnr)
+  local cached = formatter_cache[bufnr]
+  if cached and cached.key == key then
+    return cached.labels
+  end
+
   local ok, conform = pcall(require, 'conform')
   if not ok then
     return {}
   end
 
-  local ok_list, formatters, has_lsp = pcall(conform.list_formatters_to_run, 0)
+  local ok_list, formatters, has_lsp = pcall(conform.list_formatters_to_run, bufnr)
   if not ok_list then
     return {}
   end
@@ -57,6 +79,7 @@ function M.formatter_labels()
     labels[#labels + 1] = 'lsp'
   end
 
+  formatter_cache[bufnr] = { key = key, labels = labels }
   return labels
 end
 

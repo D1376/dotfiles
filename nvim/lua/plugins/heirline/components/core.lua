@@ -3,15 +3,26 @@ local M = {}
 M.Spacer = { provider = ' ' }
 M.Fill = { provider = '%=' }
 M.Ruler = {
-  provider = function()
-    local line = vim.fn.line '.'
-    local column = vim.fn.virtcol '.'
+  init = function(self)
+    self.line = vim.fn.line '.'
+    self.column = vim.fn.virtcol '.'
     local total = math.max(vim.fn.line '$', 1)
-    local percent = math.floor(((line - 1) / math.max(total - 1, 1)) * 100 + 0.5)
-
-    return (' %d:%d %d%%'):format(line, column, percent)
+    self.percent = math.floor(((self.line - 1) / math.max(total - 1, 1)) * 100 + 0.5)
   end,
-  hl = { fg = 'dim' },
+  {
+    provider = '',
+    hl = { fg = 'dim', bg = 'bg' },
+  },
+  {
+    provider = function(self)
+      return (' %d:%d | %d%% '):format(self.line, self.column, self.percent)
+    end,
+    hl = { fg = 'mode_fg', bg = 'dim', bold = true },
+  },
+  {
+    provider = '',
+    hl = { fg = 'dim', bg = 'bg' },
+  },
 }
 
 function M.RightPadding(child, num_space)

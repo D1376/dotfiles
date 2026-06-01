@@ -56,12 +56,12 @@ return {
       },
     },
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'lazydev' },
+      default = { 'lsp', 'path', 'snippets', 'buffer' },
       providers = {
         lsp = {
-          async = true,
-          timeout_ms = 80,
-          fallbacks = {},
+          async = false,
+          timeout_ms = 2000,
+          fallbacks = { 'buffer' },
         },
         path = {
           opts = {
