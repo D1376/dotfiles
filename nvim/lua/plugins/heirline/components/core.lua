@@ -15,7 +15,7 @@ M.Ruler = {
   },
   {
     provider = function(self)
-      return (' %d:%d | %d%% '):format(self.line, self.column, self.percent)
+      return (' %d:%d | %d%%%% '):format(self.line, self.column, self.percent)
     end,
     hl = { fg = 'mode_fg', bg = 'dim', bold = true },
   },

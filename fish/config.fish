@@ -42,6 +42,10 @@ if command -q eza
     alias lt4="eza -lT -L4 --icons"
 end
 
+if command -q opencode
+  alias oc="opencode"
+end
+
 # Small command shortcuts.
 abbr --add --position command -- '~' 'cd ~'
 alias ..="cd .."
