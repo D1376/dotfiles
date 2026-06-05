@@ -32,7 +32,7 @@ disabled = false
 format = '[$symbol]($style)'
 
 [directory]
-# style = 'bold blue'
+style = 'bold blue'
 format = '[$path]($style) '
 read_only = ' 󰌾'
 truncation_length = 3
