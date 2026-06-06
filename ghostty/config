@@ -4,8 +4,8 @@
 
 # Theme & Background
 theme = Catppuccin Mocha
-background-opacity = 0.85
-background-blur = 30
+background-opacity = 0.80
+background-blur = 20
 
 # Fonts
 font-family = "Berkeley Mono Variable"
