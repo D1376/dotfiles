@@ -8,11 +8,11 @@ background-opacity = 0.90
 background-blur = 20
 
 # Fonts
-font-family = "Berkeley Mono Variable"
+font-family = "JetBrains Mono"
 font-family = "Maple Mono NF CN"
-font-size = 14
+font-size = 15
 font-thicken = true
-adjust-cell-height = 15%
+adjust-cell-height = 10%
 adjust-cell-width = 5%
 
 # Windows
