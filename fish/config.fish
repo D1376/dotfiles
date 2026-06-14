@@ -3,7 +3,14 @@
 # since 2024 2025 2026
 
 # Cute startup greeting.
-set -g fish_greeting (printf "%sNyaa~ %sterminal ready! %s(=^w^=) <3%s" (set_color --bold magenta) (set_color 89B4FA) (set_color --bold magenta) (set_color normal))
+function _fish_greeting
+    set -l pink (set_color --bold magenta)
+    set -l blue (set_color 89B4FA)
+    set -l off (set_color normal)
+    printf '%s%s %sNyaa~ %sterminal ready! %s(^._.^)~%s <3\n' \
+        $pink '🐾' $pink $blue $pink $off
+end
+set -g fish_greeting (_fish_greeting)
 
 # Default editor.
 set -gx EDITOR nvim
@@ -18,7 +25,6 @@ end
 fish_add_path --global \
     $HOME/.local/bin \
     $HOME/.opencode/bin \
-    /opt/homebrew/opt/coreutils/libexec/gnubin \
     /opt/homebrew/opt/openjdk@21/bin
 fish_add_path --global --append $HOME/.lmstudio/bin
 
