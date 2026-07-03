@@ -17,15 +17,15 @@ $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
+$all\
 $character\
 """
 
-right_format = """
-$all\
-"""
+# right_format = """
+# """
 
-[line_break]
-disabled = true
+# [line_break]
+# disabled = true
 
 [os]
 disabled = false

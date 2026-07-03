@@ -4,8 +4,8 @@
 
 # Theme & Background
 theme = Catppuccin Mocha
-background-opacity = 0.60
-background-blur = 30
+background-opacity = 0.95
+background-blur = 20
 
 # Fonts
 font-family = "Berkeley Mono Variable"
@@ -21,7 +21,7 @@ window-save-state = always
 window-colorspace = display-p3
 window-padding-balance = true
 window-padding-x = 10
-window-padding-y = 10
+window-padding-y = 5
 
 # Mac Option Key
 macos-option-as-alt = true
