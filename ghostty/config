@@ -4,15 +4,15 @@
 
 # Theme & Background
 theme = Catppuccin Mocha
-background-opacity = 0.95
-background-blur = 20
+background-opacity = 0.85
+background-blur = 30
 
 # Fonts
-font-family = "Berkeley Mono Variable"
+font-family = "JetBrains Mono"
 font-family = "Maple Mono NF CN"
 font-size = 14
 font-thicken = true
-adjust-cell-height = 20%
+adjust-cell-height = 10%
 # adjust-cell-width = 3%
 
 # Windows
