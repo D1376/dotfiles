@@ -1,24 +1,20 @@
 .DS_Store
 
-tmux/plugins
-fcitx5
-git
-configstore
-nvim/lazy-lock.json
-nvim/tmp
 gh
-raycast
+git
 zed
-opencode
-mole
 htop
-snapzy
-.zcompdump
+mole
+openlogi
+opencode
+raycast
+raycast-x/extensions
+raycast-x/node-compile-cache/v22.22.2-arm64-2b4477fa-501
+tmux/plugins
 yazi/flavors
 yazi/package.toml
-
-/raycast-x/extensions
+nvim/tmp
+nvim/lazy-lock.json
 
 AGENTS.md
 CLAUDE.md
-/openlogi
