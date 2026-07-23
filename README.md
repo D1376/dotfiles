@@ -1,66 +1,63 @@
 # Dotfiles
 
-Personal configuration files for my development environment on macOS.
+Personal configuration files for my macOS development environment.
+All tools share a consistent **Catppuccin Mocha** dark theme.
 
-## Overview
-
-This repository contains the configuration for my terminal-based workflow, centered around Neovim, tmux, and modern CLI tools. All tools share a consistent **Catppuccin Mocha** dark theme.
-
-## Directory Structure
+## Structure
 
 ```
 .config/
 ├── bash/           # Bash shell configuration
 ├── btop/           # System resource monitor
-├── fish/           # Fish shell configuration
-├── ghostty/        # GPU-accelerated terminal emulator
-├── nvim/           # Neovim editor configuration
+├── fish/           # Fish shell with fzf, zoxide, fisher
+├── ghostty/        # GPU-accelerated terminal + GLSL cursor shaders
+├── git/            # Global git ignore rules
+├── karabiner/      # macOS keyboard remapping (Ctrl+hjkl → arrows)
+├── nvim/           # Neovim (primary editor)
 ├── tmux/           # Terminal multiplexer
 ├── yazi/           # Terminal file manager
-├── zsh/            # Zsh shell configuration
-└── starship.toml   # Cross-shell prompt configuration
+├── zed/            # Zed editor configuration
+├── zsh/            # Z shell with zinit, fzf, zoxide, starship
+└── starship.toml   # Cross-shell prompt (Catppuccin Mocha)
 ```
 
-## Tools
+## Environment
 
-### Editor
-
-- **Neovim** — Primary editor. Configured with lazy.nvim, LSP servers (Python, C++, TypeScript, Lua, Java, etc.), Treesitter, Telescope, and 20+ plugins.
-
-### Terminal & Shell
-
-- **Ghostty** — GPU-accelerated terminal with custom GLSL cursor shaders.
-- **tmux** — Terminal multiplexer with 13 plugins (continuum, resurrect, fzf, yank, etc.). Prefix key: `` ` ``.
-- **Fish / Zsh / Bash** — All configured with Vi-mode keybindings, fzf integration, and shared aliases (eza, nvim, git shortcuts).
-- **Starship** — Minimal cross-shell prompt with Git status and language indicators.
-
-### CLI Tools
-
-- **yazi** — Terminal file manager with image preview support.
-- **btop** — System monitor with Vim-style navigation.
-
-
-## Key Bindings
-
-All shells use **Vi-mode** as the default editing style. Common bindings:
-
-| Key | Action |
-|-----|--------|
-| `Ctrl-p / Ctrl-n` | History search (up/down) |
-| `Alt-h / Alt-l` | Move word left/right |
-| `Ctrl-A / Ctrl-E` | Jump to line start/end |
+| Tool | Role | Highlights |
+|------|------|------------|
+| **Neovim** | Primary editor | lazy.nvim, 9 LSP servers, blink.cmp, snacks.nvim (dashboard/keys/toggles), heirline statusline, flash, oil, gitsigns, telescope |
+| **Zed** | Secondary editor | vim mode, opencode agent, codex-acp, claude-acp |
+| **Ghostty** | Terminal emulator | 0.85 opacity, hidden titlebar, 4 custom GLSL cursor shaders (sweep/tail/warp/ripple) |
+| **tmux** | Terminal multiplexer | `` ` `` prefix, vi keys, Catppuccin Mocha status bar, allow-passthrough for Yazi images |
+| **Fish** | Daily shell | Vi-mode, fzf integration, zoxide, fippuccin theme, custom greeting |
+| **Zsh** | Fallback shell | zinit, fast-syntax-highlighting, zsh-autosuggestions, fzf-tab, zoxide |
+| **Bash** | Compatibility | Vi-mode, custom prompt, dircolors |
+| **Karabiner** | Keyboard customizer | Ctrl+h/j/k/l → arrow keys (system-wide) |
+| **Yazi** | File manager | Catppuccin Mocha flavor, image preview |
+| **btop** | System monitor | Transparent background, vim-style keys |
 
 ## Fonts
 
 - **JetBrains Mono** — Primary coding font
-- **Maple Mono NF CN** — Fallback for CJK characters and icons
+- **Maple Mono NF CN** — CJK / icon fallback
+
+## Key Bindings
+
+All shells use **Vi-mode**. System-wide:
+
+| Key | Action |
+|-----|--------|
+| `Ctrl-h/j/k/l` | Arrow keys (via Karabiner) |
+| `Ctrl-p / Ctrl-n` | History search |
+| `Alt-h / Alt-l` | Move word left/right |
+| `Ctrl-a / Ctrl-e` | Line start/end |
+| `` ` `` | tmux prefix |
 
 ## Installation
 
-Clone this repository to `~/.config`:
-
 ```bash
-git clone <repo-url> ~/.config
+git clone https://github.com/D1376/dotfiles.git ~/.config
 ```
 
-Individual tool configs may require additional setup (plugin managers, LSP servers, etc.). Refer to each tool's directory for details.
+Nvim plugins, LSP servers, tmux plugins, and shell completions may need
+additional setup — refer to each directory for its requirements.
