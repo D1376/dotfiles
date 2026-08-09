@@ -8,7 +8,7 @@ function _fish_greeting
     set -l blue (set_color 89B4FA)
     set -l off (set_color normal)
     printf '%s%s %sNyaa~ %sterminal ready! %s(^._.^)~%s <3\n' \
-        $pink '🐾' $pink $blue $pink $off
+        $pink $pink $blue $pink $off
 end
 set -g fish_greeting (_fish_greeting)
 
@@ -21,12 +21,17 @@ if test -x /opt/homebrew/bin/brew; and not set -q HOMEBREW_PREFIX
     eval (/opt/homebrew/bin/brew shellenv)
 end
 
+# Keep Homebrew tools ahead of macOS system shims even when HOMEBREW_PREFIX is inherited.
+fish_add_path --global /opt/homebrew/bin /opt/homebrew/sbin
+
 # User and package paths.
 fish_add_path --global \
     $HOME/.local/bin \
     $HOME/.opencode/bin \
     /opt/homebrew/opt/openjdk@21/bin
-fish_add_path --global --append $HOME/.lmstudio/bin
+if test -d "$HOME/.lmstudio/bin"
+    fish_add_path --global --append "$HOME/.lmstudio/bin"
+end
 
 # fzf defaults.
 if command -q rg
@@ -61,23 +66,21 @@ alias vi="nvim"
 alias vim="nvim"
 alias gst="git status"
 alias cfg="cd ~/.config"
-alias cc="claude --dangerously-skip-permissions"
+if command -q claude
+    alias cc="claude --dangerously-skip-permissions"
+end
 alias 哈吉米="cat"
 
-# Vi mode and key bindings.
-fish_vi_key_bindings
+# Default Fish key bindings.
+fish_default_key_bindings
 
 # Shell navigation shortcuts.
-for mode in default insert
-    bind --mode $mode ctrl-p history-search-backward
-    bind --mode $mode ctrl-n history-search-forward
-    bind --mode $mode ctrl-a beginning-of-line
-    bind --mode $mode ctrl-e end-of-line
-end
-
-bind --mode insert ctrl-f accept-autosuggestion
-bind --mode default alt-w kill-selection
-bind --mode visual alt-w kill-selection
+bind ctrl-p history-search-backward
+bind ctrl-n history-search-forward
+bind ctrl-a beginning-of-line
+bind ctrl-e end-of-line
+bind ctrl-f accept-autosuggestion
+bind alt-w kill-selection
 
 # Smarter cd.
 if command -q zoxide
@@ -92,3 +95,7 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# >>> grok installer >>>
+fish_add_path $HOME/.grok/bin
+# <<< grok installer <<<

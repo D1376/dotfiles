@@ -2,17 +2,21 @@
 # @author deng
 # since 2024 2025 2026
 
+# Customs Shader
+custom-shader = ./shaders/ghostty-cursor-shaders/cursor_tail.glsl
+
 # Theme & Background
 theme = Catppuccin Mocha
-background-opacity = 0.70
-background-blur = 10
+background-opacity = 0.95
+background-blur = 30
 
 # Fonts
+font-family = "Berkeley Mono Variable"
 font-family = "JetBrains Mono"
 font-family = "Maple Mono NF CN"
 font-size = 14
 font-thicken = true
-adjust-cell-height = 15%
+adjust-cell-height = 20%
 # adjust-cell-width = 3%
 
 # Windows
@@ -34,7 +38,7 @@ cursor-style = block
 cursor-click-to-move = true
 cursor-style-blink = true
 
-# # Tmux Keybind
+# Tmux Keybind
 # keybind = ctrl+`=activate_key_table_once:tmux
 # keybind = tmux/catch_all=ignore
 # keybind = tmux/escape=deactivate_key_table

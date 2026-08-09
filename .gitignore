@@ -17,8 +17,8 @@ nvim/tmp
 nvim/lazy-lock.json
 
 /herdr/.plugins.lock
-/herdr/herdr-client.log
-/herdr/herdr-server.log
+/herdr/*.log
+/herdr/*.sock
 /herdr/session.json
 
 AGENTS.md
