@@ -7,8 +7,8 @@ function _fish_greeting
     set -l pink (set_color --bold magenta)
     set -l blue (set_color 89B4FA)
     set -l off (set_color normal)
-    printf '%s%s %sNyaa~ %sterminal ready! %s(^._.^)~%s <3\n' \
-        $pink $pink $blue $pink $off
+    printf '%sNyaa~ %sterminal ready! %s(^._.^)~%s <3\n' \
+        $pink $blue $pink $off
 end
 set -g fish_greeting (_fish_greeting)
 

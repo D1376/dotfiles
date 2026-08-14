@@ -2,7 +2,9 @@
 # @author deng
 # since 2024 2025 2026
 
-# Customs Shader
+# Customs
+macos-icon = custom
+macos-custom-icon = ~/.config/ghostty/icons/catppuccin-latte.icns
 custom-shader = ./shaders/ghostty-cursor-shaders/cursor_tail.glsl
 
 # Theme & Background
@@ -11,7 +13,6 @@ background-opacity = 0.95
 background-blur = 30
 
 # Fonts
-font-family = "Berkeley Mono Variable"
 font-family = "JetBrains Mono"
 font-family = "Maple Mono NF CN"
 font-size = 14
