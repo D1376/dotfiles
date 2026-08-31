@@ -4,24 +4,25 @@
 
 # Customs
 macos-icon = custom
-macos-custom-icon = ~/.config/ghostty/icons/catppuccin-latte.icns
+macos-custom-icon = ~/.config/ghostty/icons/Ghostty_Light.icns
 custom-shader = ./shaders/ghostty-cursor-shaders/cursor_tail.glsl
 
 # Theme & Background
 theme = Catppuccin Mocha
-background-opacity = 0.95
+background-opacity = 0.85
 background-blur = 30
 
 # Fonts
 font-family = "JetBrains Mono"
 font-family = "Maple Mono NF CN"
+font-style = Bold
 font-size = 14
 font-thicken = true
-adjust-cell-height = 20%
+adjust-cell-height = 15%
 # adjust-cell-width = 3%
 
 # Windows
-macos-titlebar-style = hidden
+# macos-titlebar-style = hidden
 window-save-state = always
 window-colorspace = display-p3
 window-padding-balance = true
@@ -43,14 +44,14 @@ cursor-style-blink = true
 # keybind = ctrl+`=activate_key_table_once:tmux
 # keybind = tmux/catch_all=ignore
 # keybind = tmux/escape=deactivate_key_table
-#
+
 # keybind = tmux/c=new_tab
 # keybind = tmux/n=next_tab
 # keybind = tmux/p=previous_tab
-#
+
 # keybind = tmux/v=new_split:right
 # keybind = tmux/s=new_split:down
-#
+
 # keybind = tmux/k=goto_split:up
 # keybind = tmux/j=goto_split:down
 # keybind = tmux/h=goto_split:left

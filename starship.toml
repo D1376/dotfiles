@@ -10,7 +10,6 @@ palette = 'catppuccin_mocha'
 # $cmd_duration \
 
 format = """
-$character\
 $os\
 $directory\
 $git_branch\
@@ -18,17 +17,18 @@ $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-"""
-
-right_format = """
 $all\
+$character\
 """
 
-[line_break]
-disabled = true
+# right_format = """
+# """
+
+# [line_break]
+# disabled = true
 
 [os]
-# disabled = false
+disabled = false
 format = '[$symbol]($style)'
 
 # [username]
@@ -51,8 +51,8 @@ read_only = ' 󰌾'
 truncation_length = 3
 
 [character]
-# success_symbol = '[\$](bold green)'
-success_symbol = '[➔](bold green)'
+success_symbol = '[\$](bold green)'
+# success_symbol = '[➔](bold green)'
 error_symbol = '[✘](bold red)'
 # vimcmd_symbol = '[➔](bold green)'
 
